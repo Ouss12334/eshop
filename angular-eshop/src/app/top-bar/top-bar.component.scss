@@ -19,9 +19,12 @@ h6 {
 p {
   margin: 0;
 }
-
+// center items
 .spacer {
+  display: flex;
   flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .toolbar {
@@ -37,8 +40,10 @@ p {
   font-weight: 600;
 }
 
+// ignore app name to have it centered
 .toolbar img, .homepage  {
-  margin: 0 16px;
+  position: absolute;
+  padding-left: 110px;
 }
 
 .toolbar #twitter-logo {
@@ -67,4 +72,162 @@ a:hover{
 }
 a:hover svg{
   fill:#000;
+}
+
+/////////// button
+
+$bg-color: #F1E9DA;
+$link-text-color: #fff;
+$button-bg-1: #541388;
+$button-bg-2: #D90368;
+$button-bg-3: #104547;
+$button-bg-4: #4F000B;
+$button-bg-5: #F28123;
+$border-radius: 6px;
+$overlay-color: #fff;
+
+/* button styles !!!YOU NEED THEM
+!!!ALSO YOU NEED TO ADD FONTWESOME */
+
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: $link-text-color;
+  //text-transform: capitalize;
+  /* background-color: - add your own background-color */
+  font: {
+    family: 'Roboto', sans-serif; /* put your font-family */
+    size: 18px;
+  }
+  padding: 20px 0px;
+  width: 100px;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+/* effect-2 styles */
+
+.effect.effect-slide {
+  transition: all 0.2s linear 0s;
+
+  &:before {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 100%;
+    background-color: rgba($overlay-color,0.3);
+    border-radius: 0px $border-radius $border-radius 0px;
+    transition: all 0.2s linear 0s;
+    text-align: center;
+  }
+
+  &:hover {
+    text-indent: -30px;
+    margin-right: 5px;
+
+    &:before {
+      right: 0;
+      text-indent: 0px;
+    }
+  }
+}
+
+// icons for effects
+.effect-login {
+  &:before {
+    font-family: "Material Icons";
+    content: "\e853";
+  }
+}
+
+.effect-create-account {
+  width: 170px;
+  &:before {
+    font-family: "Material Icons";
+    content: "\e7fe";
+  }
+}
+
+.effect-basket {
+  &:before {
+    font-family: "Material Icons";
+    content: "\e8cb";
+  }
+}
+
+.effect-search {
+  &:before {
+    font-family: "Material Icons";
+    content: "\e8b6";
+  }
+}
+//https://codepen.io/fahrettinaksoy/pen/YzPxMyr
+//// form
+//.round-button {
+//  //padding-top: 10px;
+//  font-size: 26px;
+//  //display: flex;
+//  align-items: center;
+//  //margin-top: 15px;
+//  //justify-content: center;
+//  //position: absolute;
+//  //top: 0;
+//  //right: -30px;
+//  width: 30px;
+//  height: 40px;
+//  background-color: rgba(255,97,141,0);
+//  //height: 100%;
+//  //background-color: rgba($overlay-color,0.3);
+//  border-radius: 0px $border-radius $border-radius 0px;
+//  //border: 0px;
+//  //padding-top: ;
+//  //transition: all 0.2s linear 0s;
+//  text-align: center;
+//  //background: #0d2f75;
+//  //border: 2px solid #0d2f75;
+//
+//  //display:inline-block;
+//  //width: 30px;
+//  //height: 30px;
+//  //font-size: 18px;
+//  ////text-align: right;
+//  ////text-align: center;
+//  ////line-height:80px;
+//  //border: 2px solid #0d2f75;
+//  //border-radius: 50%;
+//  //margin: 0 0 0 5px;
+//  ////color:#f5f5f5;
+//  ////text-align:center;
+//  //text-decoration:none;
+//  //background: #0d2f75;
+//  //color: #ffffff;
+//  //box-shadow: 0 0 3px gray;
+//  //font-size:20px;
+//  //font-weight:bold;
+//}
+//.round-button:hover {
+//  background: #0d2f75;
+//  border: 2px solid #0d2f75;
+//}
+
+.search-button {
+  font-size: 26px;
+  //padding: 5px;
+  padding-left: 5px;
+}
+
+.search-product-input {
+  display: inline-block;
+  font-size: 18px;
+  font-family: "Bodoni MT", sans-serif;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 5px;
 }
