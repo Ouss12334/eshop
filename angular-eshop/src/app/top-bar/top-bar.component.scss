@@ -28,7 +28,7 @@ p {
 }
 
 .toolbar {
-  position: absolute;
+  //position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -63,6 +63,11 @@ p {
 .toolbar #twitter-logo:hover,
 .toolbar #youtube-logo:hover {
   opacity: 0.8;
+}
+
+// shop icon
+.toolbar svg {
+  z-index: 100;
 }
 
 // homepage link
