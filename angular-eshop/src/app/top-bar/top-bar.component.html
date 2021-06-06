@@ -1,12 +1,12 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
 
-  <!-- site icon-->
-  <!-- todo this as icon-->
-  <!--<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">-->
-  <!--  <path d="M0 0h24v24H0V0z" fill="none"/>-->
-  <!--  <path d="M19 7V4H5v3H2v13h8v-4h4v4h8V7h-3zm1 11h-4v-4H8v4H4V9h3V6h10v3h3v9zM8 8h2v1H8v3h3v-1H9v-1h2V7H8zm7 1h-1V7h-1v3h2v2h1V7h-1z"/>-->
-  <!--</svg>-->
+<!--  &lt;!&ndash; site icon&ndash;&gt;-->
+<!--  &lt;!&ndash; todo shop as icon (needs change on paint or sthn 1st) &ndash;&gt;-->
+<!--  &lt;!&ndash;<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">&ndash;&gt;-->
+<!--  &lt;!&ndash;  <path d="M0 0h24v24H0V0z" fill="none"/>&ndash;&gt;-->
+<!--  &lt;!&ndash;  <path d="M19 7V4H5v3H2v13h8v-4h4v4h8V7h-3zm1 11h-4v-4H8v4H4V9h3V6h10v3h3v9zM8 8h2v1H8v3h3v-1H9v-1h2V7H8zm7 1h-1V7h-1v3h2v2h1V7h-1z"/>&ndash;&gt;-->
+<!--  &lt;!&ndash;</svg>&ndash;&gt;-->
 
   <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
     <title>Rocket Ship</title>
@@ -24,30 +24,54 @@
     </g>
   </svg>
 
-  <!--<img-->
-  <!--  width="40"-->
-  <!--  alt="Angular Logo"-->
-  <!--  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="-->
-  <!--/>-->
+<!--  &lt;!&ndash;<img&ndash;&gt;-->
+<!--  &lt;!&ndash;  width="40"&ndash;&gt;-->
+<!--  &lt;!&ndash;  alt="Angular Logo"&ndash;&gt;-->
+<!--  &lt;!&ndash;  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="&ndash;&gt;-->
+<!--  &lt;!&ndash;/>&ndash;&gt;-->
 
   <span class="homepage"><a routerLink="/">EShop</a></span>
   <!--<div class="spacer"></div>-->
-  <div class="spacer">
-    <a class="effect effect-slide effect-login" href="Javascript:void(0);">
-      Login
-    </a>
-    <a class="effect effect-slide effect-create-account" href="Javascript:void(0);">
-      Create Account
-    </a>
-    <form>
-      <label for="search-product"></label>
-      <input id="search-product" name="search-product" type="text" placeholder="Search for a product" class="search-product-input" />
-      <a href="Javascript:void(0);"  class="search-button material-icons-outlined" >search</a>
-    <!--  type="submit" value="search"  -->
-    </form>
-    <a class="effect effect-slide effect-basket" href="Javascript:void(0);">
-      Basket
-    </a>
+  <div class="spacer container-fluid">
+    <div class="row">
+      <div class="col-md-11 shadow-sm">
+        <div class="container">
+          <div class="row mb-6">
+            <div class="col-md-2"></div>
+            <div class="col-md-1">
+              <a class="effect effect-slide effect-login" href="Javascript:void(0);">
+                Login
+              </a>
+            </div>
+            <div class="col-md-3">
+              <div class="row mb-3"></div>
+                <!--<form>-->
+                <!--  <label for="search-product"></label>-->
+                <!--  <input id="search-product" name="search-product" type="text" placeholder="Search for a product" class="search-product-input" />-->
+                <!--  <a href="Javascript:void(0);"  class="search-button material-icons-outlined" >search</a>-->
+                <!--&lt;!&ndash;  type="submit" value="search"  &ndash;&gt;-->
+                <!--</form>-->
+                <div class="input-group input-group-md">
+                  <input type="text" id="" name="" class="input-search form-control" placeholder="Search for a product" />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-search" type="button"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <a class="effect effect-slide effect-create-account" href="Javascript:void(0);">
+                  Create Account
+                </a>
+              </div>
+              <div class="col-md-1">
+                <a class="effect effect-slide effect-basket" href="Javascript:void(0);">
+                  Basket
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
   </div>
 
   <!--<a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">-->
