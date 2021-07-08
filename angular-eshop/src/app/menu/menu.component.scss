@@ -1,3 +1,7 @@
 .menu-title {
   font-weight: bold;
 }
+
+.container-fluid .position-relative {
+  z-index: 99999;
+}
