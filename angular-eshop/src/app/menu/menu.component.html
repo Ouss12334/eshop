@@ -20,9 +20,9 @@
                       Food"list"
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Fresh Food</a>
-                      <a class="dropdown-item" href="#">Sealed Food</a>
-                      <a class="dropdown-item" href="#">Frozen Food</a>
+                      <a class="dropdown-item" (click)="redirect('fresh-food')" href="Javascript:void(0)">Fresh Food</a>
+                      <a class="dropdown-item" (click)="redirect('sealed-food')" href="Javascript:void(0)">Sealed Food</a>
+                      <a class="dropdown-item" (click)="redirect('frozen-food')" href="Javascript:void(0)">Frozen Food</a>
                     </div>
                   </li>
                   <li class="nav-item dropdown">
@@ -35,14 +35,14 @@
                       <div class="dropdown-divider"></div>
                       <span class="dropdown-header">Sport</span>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Proteine</a>
-                      <a class="dropdown-item" href="#">Creatine</a>
-                      <a class="dropdown-item" href="#">Pre-workout</a>
+                      <a class="dropdown-item" (click)="redirect('sport-protein')" href="Javascript:void(0)">Proteine</a>
+                      <a class="dropdown-item" (click)="redirect('sport-creatine')" href="Javascript:void(0)">Creatine</a>
+                      <a class="dropdown-item" (click)="redirect('sport-pre')" href="Javascript:void(0)">Pre-workout</a>
                       <div class="dropdown-divider"></div>
-                      <span class="dropdown-header">Health, Vitamines</span>
+                      <span class="dropdown-header">Health, Vitamins</span>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Protection mask</a>
-                      <a class="dropdown-item" href="#">Muscle relief</a>
+                      <a class="dropdown-item" (click)="redirect('health-protection-mask')" href="Javascript:void(0)">Protection mask</a>
+                      <a class="dropdown-item" (click)="redirect('health-muscle-relief')" href="Javascript:void(0)">Muscle relief</a>
                     </div>
                   </li>
                   <li class="nav-item dropdown">
@@ -52,8 +52,8 @@
                       Beauty
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Face & Body Skincare</a>
-                      <a class="dropdown-item" href="#">Shower, Bath</a>
+                      <a class="dropdown-item" (click)="redirect('beauty-skincare')" href="Javascript:void(0)">Face & Body Skincare</a>
+                      <a class="dropdown-item" (click)="redirect('beauty-bath')" href="Javascript:void(0)">Shower, Bath</a>
                     </div>
                   </li>
                   <li class="nav-item dropdown">
@@ -63,8 +63,8 @@
                       Pet supplies
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Animal Food</a>
-                      <a class="dropdown-item" href="#">Shampoos, Sprays</a>
+                      <a class="dropdown-item" (click)="redirect('pet-food')" href="Javascript:void(0)">Animal Food</a>
+                      <a class="dropdown-item" (click)="redirect('pet-cleanliness')" href="Javascript:void(0)">Shampoos, Sprays</a>
                     </div>
                   </li>
                   <!--<li class="nav-item">-->
