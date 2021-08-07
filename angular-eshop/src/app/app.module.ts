@@ -25,7 +25,8 @@ import { SuggestionsComponent } from './suggestions/suggestions.component';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      {path: '', component: SuggestionsComponent}
+      {path: '', component: SuggestionsComponent},
+      {path: 'products/:typet', component: ProductListComponent}
     ])
   ],
   providers: [],
