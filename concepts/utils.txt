@@ -1,1 +1,3 @@
 https://codepen.io/fahrettinaksoy/pen/YzPxMyr
+
+each major should be set in its own service (like products)
