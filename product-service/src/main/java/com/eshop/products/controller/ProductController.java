@@ -1,7 +1,9 @@
 package com.eshop.products.controller;
 
 import com.eshop.products.model.Product;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.eshop.products.service.ProductService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,10 +12,14 @@ import java.util.Collections;
 import java.util.List;
 
 @RestController
+@RequestMapping("/products")
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class ProductController {
 
-    @RequestMapping("/products/{type}")
+    private final ProductService productService;
+
+    @RequestMapping("/{type}")
     public List<Product> GetProduct(@PathVariable String type) {
-        return Collections.emptyList();
+        return productService.getProductsByType(type);
     }
 }

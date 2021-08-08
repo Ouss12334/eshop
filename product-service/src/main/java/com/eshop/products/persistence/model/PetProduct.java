@@ -11,9 +11,10 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 @ToString(callSuper = true) // call super to log parent fields when needed
 @EqualsAndHashCode(callSuper = true)
-public class WorkoutProduct extends Product {
+public class PetProduct extends Product {
+
     @Builder
-    public WorkoutProduct(String id, String name, String description, Integer weightGram, OffsetDateTime fabricationDate, OffsetDateTime expirationDate, int quantity, BigDecimal unitPrice, String currency, String imageUrl, String subType) {
+    public PetProduct(String id, String name, String description, Integer weightGram, OffsetDateTime fabricationDate, OffsetDateTime expirationDate, int quantity, BigDecimal unitPrice, String currency, String imageUrl, String subType) {
         super(id, name, description, weightGram, fabricationDate, expirationDate, quantity, unitPrice, currency, imageUrl, subType);
     }
 }

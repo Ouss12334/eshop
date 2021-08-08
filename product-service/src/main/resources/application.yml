@@ -18,3 +18,7 @@ spring:
 #  sql:
 #    init:
 #      data-locations: classpath:mock-sources/db/products.sql
+
+logging:
+  level:
+    com.eshop: debug

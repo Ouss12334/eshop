@@ -1,9 +1,6 @@
 package com.eshop.products.persistence.model;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import java.math.BigDecimal;
@@ -12,10 +9,11 @@ import java.time.OffsetDateTime;
 @Data
 @Entity
 @NoArgsConstructor
+@ToString(callSuper = true) // call super to log parent fields when needed
 @EqualsAndHashCode(callSuper = true)
 public class HealthAndVitaminsProduct extends Product {
     @Builder
-    public HealthAndVitaminsProduct(String id, String name, String description, OffsetDateTime fabricationDate, OffsetDateTime expirationDate, BigDecimal price, String currency, String imageUrl, String subType) {
-        super(id, name, description, fabricationDate, expirationDate, price, currency, imageUrl, subType);
+    public HealthAndVitaminsProduct(String id, String name, String description, Integer weightGram, OffsetDateTime fabricationDate, OffsetDateTime expirationDate, int quantity, BigDecimal unitPrice, String currency, String imageUrl, String subType) {
+        super(id, name, description, weightGram, fabricationDate, expirationDate, quantity, unitPrice, currency, imageUrl, subType);
     }
 }

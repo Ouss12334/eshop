@@ -18,14 +18,20 @@ public class Product {
 
     private String description;
 
+    private Integer weightGram;
+
     private OffsetDateTime fabricationDate;
 
     private OffsetDateTime expirationDate;
 
-    private BigDecimal price;
+    private Integer quantity;
+
+    private BigDecimal unitPrice;
 
     private String currency;
 
     private String imageUrl;
+
+    private String subType;
 
 }

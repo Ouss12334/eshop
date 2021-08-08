@@ -11,13 +11,14 @@ import java.time.OffsetDateTime;
 @Data
 @Entity
 @NoArgsConstructor
+@ToString(callSuper = true) // call super to log parent fields when needed
 @EqualsAndHashCode(callSuper = true)
 public class FoodProduct extends Product {
 
     // this along @NoArgsCtor allows to use builder with parent. this is because lombok doesn't take superclass fields in consideration
     @Builder
-    public FoodProduct(String id, String name, String description, OffsetDateTime fabricationDate, OffsetDateTime expirationDate, BigDecimal price, String currency, String imageUrl, String subType) {
-        super(id, name, description, fabricationDate, expirationDate, price, currency, imageUrl, subType);
+    public FoodProduct(String id, String name, String description, Integer weightGram, OffsetDateTime fabricationDate, OffsetDateTime expirationDate, int quantity, BigDecimal unitPrice, String currency, String imageUrl, String subType) {
+        super(id, name, description, weightGram, fabricationDate, expirationDate, quantity, unitPrice, currency, imageUrl, subType);
     }
 }
 

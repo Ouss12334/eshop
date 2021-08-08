@@ -1,5 +1,6 @@
 package com.eshop.products.persistence.model;
 
+import jdk.jfr.Unsigned;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -32,14 +33,20 @@ public class Product {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "weight_gram")
+    private Integer weightGram;
+
     @Column(name = "fabrication_date")
     private OffsetDateTime fabricationDate;
 
     @Column(name = "expiration_date")
     private OffsetDateTime expirationDate;
 
-    @Column(name = "price")
-    private BigDecimal price;
+    @Column(name = "quantity")
+    private Integer quantity;
+
+    @Column(name = "unit_price")
+    private BigDecimal unitPrice;
 
     @Column(name = "currency")
     private String currency;
