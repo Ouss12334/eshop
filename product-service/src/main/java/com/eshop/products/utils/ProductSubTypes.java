@@ -8,9 +8,9 @@ public class ProductSubTypes {
     public static final String FROZEN_FOOD = "frozen-food";
 
     // fitness types
-    public static final String PROTEIN_WORKOUT = "workout-protein";
-    public static final String CREATINE_WORKOUT = "workout-creatine";
-    public static final String PRE_WORKOUT = "pre-workout";
+    public static final String PROTEIN_WORKOUT = "sport-protein";
+    public static final String CREATINE_WORKOUT = "sport-creatine";
+    public static final String PRE_WORKOUT = "sport-workout";
 
     // health types
     public static final String MASK_HEALTH = "health-protection-mask";
