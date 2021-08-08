@@ -45,8 +45,11 @@ public class Product {
     @Column(name = "quantity")
     private Integer quantity;
 
-    @Column(name = "unit_price")
+    @Column(name = "unit_price", scale = 5, precision = 25)
     private BigDecimal unitPrice;
+
+    @Column(name = "discount_price", scale = 5, precision = 25)
+    private BigDecimal discountPrice;
 
     @Column(name = "currency")
     private String currency;

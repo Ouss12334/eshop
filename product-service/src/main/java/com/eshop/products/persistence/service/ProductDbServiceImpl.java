@@ -1,10 +1,7 @@
 package com.eshop.products.persistence.service;
 
 import com.eshop.products.persistence.model.*;
-import com.eshop.products.persistence.repository.BeautyRepository;
-import com.eshop.products.persistence.repository.FoodRepository;
-import com.eshop.products.persistence.repository.HealthRepository;
-import com.eshop.products.persistence.repository.WorkoutRepository;
+import com.eshop.products.persistence.repository.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +18,7 @@ public class ProductDbServiceImpl implements ProductDbService {
     private final BeautyRepository beautyRepository;
     private final HealthRepository healthRepository;
     private final WorkoutRepository workoutRepository;
+    private final PetRepository petRepository;
 
     @Override
     public List<? extends Product> getProductsByType(Class<? extends Product> productType, String subType) {
@@ -41,6 +39,10 @@ public class ProductDbServiceImpl implements ProductDbService {
             // workout
             log.debug("fetching workout");
             return workoutRepository.findAllBySubType(subType);
+        } else if (productType.getCanonicalName().equals(PetProduct.class.getCanonicalName())) {
+            // workout
+            log.debug("fetching pet supplies");
+            return petRepository.findAllBySubType(subType);
         }
         return null;
     }

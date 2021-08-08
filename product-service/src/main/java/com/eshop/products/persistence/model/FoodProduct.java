@@ -17,8 +17,8 @@ public class FoodProduct extends Product {
 
     // this along @NoArgsCtor allows to use builder with parent. this is because lombok doesn't take superclass fields in consideration
     @Builder
-    public FoodProduct(String id, String name, String description, Integer weightGram, OffsetDateTime fabricationDate, OffsetDateTime expirationDate, int quantity, BigDecimal unitPrice, String currency, String imageUrl, String subType) {
-        super(id, name, description, weightGram, fabricationDate, expirationDate, quantity, unitPrice, currency, imageUrl, subType);
+    public FoodProduct(String id, String name, String description, Integer weightGram, OffsetDateTime fabricationDate, OffsetDateTime expirationDate, int quantity, BigDecimal unitPrice, BigDecimal discountPrice, String currency, String imageUrl, String subType) {
+        super(id, name, description, weightGram, fabricationDate, expirationDate, quantity, unitPrice, discountPrice, currency, imageUrl, subType);
     }
 }
 

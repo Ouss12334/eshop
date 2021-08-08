@@ -14,5 +14,5 @@ public interface WorkoutRepository extends JpaRepository<WorkoutProduct, String>
     /**
      * find by subtype
      */
-    List<FoodProduct> findAllBySubType(String subType);
+    List<WorkoutProduct> findAllBySubType(String subType);
 }

@@ -28,6 +28,8 @@ public class Product {
 
     private BigDecimal unitPrice;
 
+    private BigDecimal discountPrice;
+
     private String currency;
 
     private String imageUrl;

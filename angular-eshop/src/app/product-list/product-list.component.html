@@ -52,13 +52,25 @@
         </div>-->
         <div class="card-body">
           <div class="row">
-            <div class="col-md-4 mb-4">
+            <div *ngFor="let product of products" class="col-md-4 mb-4">
               <div class="card">
-                <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                <img class="card-img-top product-img" [src]="sanitizeImageUrl(product.imageUrl)" [alt]="product.name" />
                 <div class="card-body">
-                  <p class="h6"><small class="text-muted">Apple</small><br/>Butterflies Hand composite</p>
+                  <p class="h6"><small class="text-muted">{{ product.name }}</small><br/>{{ product.description }}</p>
+                  <p class="m-0">
+                    <span><i>quantity:</i> {{ product.quantity }}</span>
+                    <br/>
+                    <span><i>weight:</i> {{ formatWeight(product.weightGram) }}</span>
+                  </p>
                   <p class="row mb-3"></p>
-                  <p class="h5 m-0">$782.00</p>
+                  <p class="m-0">
+                    <span><i>Fab. date:</i> {{ product.fabricationDate | date: 'yyyy-MM-dd' }}</span>
+                    <br/>
+                    <span><i>Exp. date:</i> {{ product.expirationDate | date: 'yyyy-MM-dd' }}</span>
+                  </p>
+                  <p class="row mb-3"></p>
+                  <p *ngIf="product.discountPrice == null" class="h5 m-0">{{ formatPrice(product.unitPrice, product.currency) }}</p>
+                  <p *ngIf="product.discountPrice != null" class="h5 m-0">{{ formatPrice(product.discountPrice, product.currency) }} <s class="lead text-muted">{{ formatPrice(product.unitPrice, product.currency) }}</s></p>
                 </div>
                 <div class="card-footer p-0">
                   <div class="btn-group" role="group">
@@ -67,7 +79,7 @@
                           <span class="input-group-text size-input-amount" id="">Amount</span>
                         </div>
                         <input type="text" class="size-input-amount form-control" placeholder="0" aria-label="amount">
-                      <button type="button" class="btn btn-light">
+                      <button type="button" class="btn btn-light add-cart-btn">
                         <i class="fas fa-cart-plus"></i>
                         <span>Add Cart</span>
                       </button>
@@ -76,12 +88,19 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <!--<div class="col-md-4 mb-4">
               <div class="card">
                 <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
                 <div class="card-body">
                   <p class="h6"><small class="text-muted">Apple</small><br/>Butterflies Hand composite</p>
                   <p class="row mb-3"></p>
+                  <p class="m-0">
+                    <i class="fa-xs far fa-star"></i>
+                    <i class="fa-xs far fa-star"></i>
+                    <i class="fa-xs far fa-star"></i>
+                    <i class="fa-xs far fa-star"></i>
+                    <i class="fa-xs far fa-star"></i>
+                  </p>
                   <p class="h5 m-0">$782.00 <s class="lead text-muted">$943.00</s></p>
                 </div>
                 <div class="card-footer p-0">
@@ -99,7 +118,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
         <div class="card-footer p-3">

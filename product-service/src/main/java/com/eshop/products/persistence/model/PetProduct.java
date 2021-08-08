@@ -14,7 +14,7 @@ import java.time.OffsetDateTime;
 public class PetProduct extends Product {
 
     @Builder
-    public PetProduct(String id, String name, String description, Integer weightGram, OffsetDateTime fabricationDate, OffsetDateTime expirationDate, int quantity, BigDecimal unitPrice, String currency, String imageUrl, String subType) {
-        super(id, name, description, weightGram, fabricationDate, expirationDate, quantity, unitPrice, currency, imageUrl, subType);
+    public PetProduct(String id, String name, String description, Integer weightGram, OffsetDateTime fabricationDate, OffsetDateTime expirationDate, int quantity, BigDecimal unitPrice, BigDecimal discountPrice, String currency, String imageUrl, String subType) {
+        super(id, name, description, weightGram, fabricationDate, expirationDate, quantity, unitPrice, discountPrice, currency, imageUrl, subType);
     }
 }

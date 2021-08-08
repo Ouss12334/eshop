@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -14,7 +14,10 @@ export class MenuComponent implements OnInit {
   }
 
   redirect(category: string) {
-    this.router.navigate(['/products', category] /*{ relativeTo: this.route }*/)
+    // fix for route not changing on same url with different path variable
+    this.router.navigateByUrl("/", {skipLocationChange: true})
+      .then(() =>
+        this.router.navigate(['/products', category] /*{ relativeTo: this.route }*/))
   }
 
 }

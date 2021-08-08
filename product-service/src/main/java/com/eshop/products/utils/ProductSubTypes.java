@@ -1,5 +1,8 @@
 package com.eshop.products.utils;
 
+/**
+ * the products sub types, must match the api value.
+ */
 public class ProductSubTypes {
 
     // food types

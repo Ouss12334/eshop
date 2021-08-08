@@ -13,5 +13,5 @@ public interface HealthRepository extends JpaRepository<HealthAndVitaminsProduct
     /**
      * find by subtype
      */
-    List<FoodProduct> findAllBySubType(String subType);
+    List<HealthAndVitaminsProduct> findAllBySubType(String subType);
 }
